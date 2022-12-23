@@ -1,0 +1,185 @@
+/*Обнуление*/
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+html,body{
+    font-family: 'Roboto', sans-serif;
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+/*———————————————————————————*/
+.container{
+    height: 435px;
+    width: 600px;
+    margin: 50px auto;
+    display: grid;
+    grid-template-areas: 
+    "search  search   search   search"
+    " page   page      page    title"
+    " page   page      page    list"
+    " now    now      details  list";
+    grid-template-columns: 99px 99px 99px 302px;
+    grid-template-rows: 45px 68px 277px 44px;
+    /* border: 1px solid black; */
+    gap: 10px;
+
+}
+.search-bar {
+    grid-area: search;
+}
+.search-bar_button{
+    background-image: url("./search-icon.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #ffffff00;
+    height: 20px;
+    width: 20px;
+    background-color: rgba(255, 255, 255, 0);
+}
+.search-bar_form{
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.search-bar_text{
+    width: 90%;
+    height: 100%;
+    font-size: 18px;
+    line-height: 21px;
+    color: #696969;
+}
+
+.added-locations-title{
+    font-size: 26px;
+    line-height: 28px;
+    padding: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    grid-area: title;
+}
+.added-locations-list{
+    grid-area: list;
+    width: 100%;
+    padding: 45px 18px;
+    font-size: 24px;
+    line-height: 28px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+}
+.added-locations-list ul{
+    
+}
+.added-locations-list li{
+    margin-bottom: 20px;
+}
+.now-button{
+    grid-area:now;
+}
+.details-button{
+    grid-area: details;
+}
+.foreast-button{
+    grid-area:forecast;
+    display: none;
+}
+.block{
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}
+.active{
+    background-color: black;
+    color: white;
+}
+
+
+
+.container-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.now-page{
+    grid-area: page;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+.now-page .temperature{
+    align-self: flex-start;
+    font-size: 70px;
+    line-height: 82px;
+}
+.now-page  .countre{
+    font-size: 24px;
+    line-height: 28px;
+}
+.now-page .add-button{
+    font-size: 24px;
+    line-height: 28px;
+}
+.now-page  .icon{
+    width: 50%;
+     
+}
+
+
+.details-page{
+    grid-area: page;
+    flex-direction: column;
+    justify-content: space-around;
+    padding:30px ;
+    font-weight: 400;
+    font-size: 24px;
+
+}
+.details-page .country-name{
+    align-self: flex-start;
+}
+.details-page  .info-list li{
+    margin-bottom: 15px;
+}
+
+
+.forecast-page{
+    grid-area: page;
+    display: none;
+}
